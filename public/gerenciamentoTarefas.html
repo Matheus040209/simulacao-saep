@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link active" aria-current="page">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="./cadastroUsuarios.html" class="nav-link">Cadastro de Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a href="./cadastroTarefas.html" class="nav-link">Cadastro de Tarefas</a>
+          </li>
+          <li class="nav-item">
+            <a href="./gerenciamentoTarefas.html" class="nav-link">Gerenciar Tarefas</a>
+          </li>
+        </ul>
+      </header>
+    <div class="container py-5">
+      <h2 class="text-center mb-4">Tarefas</h2>
+
+      <div class="row g-4">
+
+        <!-- A FAZER -->
+        <div class="col-md-4">
+          <h4 class="text-dark mb-3">A Fazer</h4>
+
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Descrição: Alta Prioridade</li>
+                <li class="list-group-item">Setor: Y</li>
+                <li class="list-group-item">Prioridade: Alta</li>
+                <li class="list-group-item">Usuário: A</li>
+              </ul>
+
+              <!-- BOTÕES -->
+              <div class="d-flex justify-content-between mb-3">
+                <button class="btn btn-primary btn-sm">Editar</button>
+                <button class="btn btn-primary btn-sm">Excluir</button>
+              </div>
+
+              <!-- STATUS -->
+              <div class="d-flex gap-2">
+                <select class="form-select form-select-sm">
+                  <option selected>A Fazer</option>
+                  <option>Fazendo</option>
+                  <option>Pronto</option>
+                </select>
+
+                <button class="btn btn-primary btn-sm">
+                  Alterar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAZENDO -->
+        <div class="col-md-4">
+          <h4 class="text-dark mb-3">Fazendo</h4>
+
+          <!-- CARD 1 -->
+          <div class="card shadow-sm mb-3">
+            <div class="card-body">
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Descrição: Baixa Prioridade</li>
+                <li class="list-group-item">Setor: F</li>
+                <li class="list-group-item">Prioridade: Baixa</li>
+                <li class="list-group-item">Usuário: C</li>
+              </ul>
+
+              <div class="d-flex justify-content-between mb-3">
+                <button class="btn btn-primary btn-sm">Editar</button>
+                <button class="btn btn-primary btn-sm">Excluir</button>
+              </div>
+
+              <div class="d-flex gap-2">
+                <select class="form-select form-select-sm">
+                  <option>A Fazer</option>
+                  <option selected>Fazendo</option>
+                  <option>Pronto</option>
+                </select>
+
+                <button class="btn btn-primary btn-sm">
+                  Alterar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Descrição: Baixa Prioridade</li>
+                <li class="list-group-item">Setor: G</li>
+                <li class="list-group-item">Prioridade: Baixa</li>
+                <li class="list-group-item">Usuário: D</li>
+              </ul>
+
+              <div class="d-flex justify-content-between mb-3">
+                <button class="btn btn-primary btn-sm">Editar</button>
+                <button class="btn btn-primary btn-sm">Excluir</button>
+              </div>
+
+              <div class="d-flex gap-2">
+                <select class="form-select form-select-sm">
+                  <option>A Fazer</option>
+                  <option selected>Fazendo</option>
+                  <option>Pronto</option>
+                </select>
+
+                <button class="btn btn-primary btn-sm">
+                  Alterar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRONTO -->
+        <div class="col-md-4">
+          <h4 class="text-dark mb-3">Pronto</h4>
+
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Descrição: Concluída</li>
+                <li class="list-group-item">Setor: H</li>
+                <li class="list-group-item">Prioridade: Média</li>
+                <li class="list-group-item">Usuário: D</li>
+              </ul>
+
+              <div class="d-flex justify-content-between mb-3">
+                <button class="btn btn-primary btn-sm">Editar</button>
+                <button class="btn btn-primary btn-sm">Excluir</button>
+              </div>
+
+              <div class="d-flex gap-2">
+                <select class="form-select form-select-sm">
+                  <option>A Fazer</option>
+                  <option>Fazendo</option>
+                  <option selected>Pronto</option>
+                </select>
+
+                <button class="btn btn-primary btn-sm">
+                  Alterar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+```
