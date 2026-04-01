@@ -1,83 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Tarefas</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="./index.html" class="nav-link active" aria-current="page">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a href="./cadastroUsuarios.html" class="nav-link">Cadastro de Usuarios</a>
-          </li>
-          <li class="nav-item">
-            <a href="./cadastroTarefas.html" class="nav-link">Cadastro de Tarefas</a>
-          </li>
-          <li class="nav-item">
-            <a href="./gerenciamentoTarefas.html" class="nav-link">Gerenciar Tarefas</a>
-          </li>
-        </ul>
-      </header>
 
-      <form>
-        <h1 class="h3 mb-3 fw-normal">Cadastro de Tarefas</h1>
-      
-        <div class="form-floating mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="floatingName"
-            placeholder="Seu nome"
-          />
-          <label for="floatingName">Descrição</label>
-        </div>
-      
-        <div class="form-floating mb-3">
-          <input
-            type="email"
-            class="form-control"
-            id="floatingEmail"
-            placeholder="name@example.com"
-          />
-          <label for="floatingEmail">Setor</label>
-        </div>
-      
-        <div class="form-floating mb-3">
-          <select class="form-select" id="floatingUserType" aria-label="Tipo de Usuário">
-            <option selected>Selecione usuário</option>
-            
-          </select>
-          <label for="floatingUserType">Usuário</label>
-        </div>
-      
-        <div class="form-floating mb-3">
-          <select class="form-select" id="floatingPriority" aria-label="Prioridade">
-            <option selected>Selecione a prioridade</option>
-            <option value="baixa">Baixa</option>
-            <option value="media">Média</option>
-            <option value="alta">Alta</option>
-          </select>
-          <label for="floatingPriority">Prioridade</label>
-        </div>
-      
-        <button class="btn btn-primary w-100 py-2" type="submit">
-          Cadastrar
-        </button>
-      </form>
-      <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+<header class="d-flex justify-content-center py-3">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a href="./index.html" class="nav-link active">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a href="./cadastroUsuarios.html" class="nav-link">Cadastro de Usuarios</a>
+    </li>
+    <li class="nav-item">
+      <a href="./cadastroTarefas.html" class="nav-link">Cadastro de Tarefas</a>
+    </li>
+    <li class="nav-item">
+      <a href="./gerenciamentoTarefas.html" class="nav-link">Gerenciar Tarefas</a>
+    </li>
+  </ul>
+</header>
+
+<form id="formCadastro" class="container mt-4">
+  <h1 class="h3 mb-3 fw-normal">Cadastro de Tarefas</h1>
+
+  <div class="form-floating mb-3">
+    <input id="descricao" type="text" class="form-control" placeholder="Descrição" required>
+    <label>Descrição</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input id="setor" type="text" class="form-control" placeholder="Setor" required>
+    <label>Setor</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <select class="form-select" id="usuario" required>
+        <option value="">Selecione usuário</option>
+    </select>
+    <label>Usuário</label>
+</div>
+
+  <div class="form-floating mb-3">
+    <select class="form-select" id="prioridade" required>
+      <option value="">Selecione a prioridade</option>
+      <option value="baixa">Baixa</option>
+      <option value="media">Média</option>
+      <option value="alta">Alta</option>
+    </select>
+    <label>Prioridade</label>
+  </div>
+
+  <button class="btn btn-primary w-100 py-2" type="submit">
+    Cadastrar
+  </button>
+</form>
+
+<p id="mensagem" class="text-center mt-3"></p>
+
+<script src="cadastroTarefas.js"></script>
+
 </body>
 </html>
