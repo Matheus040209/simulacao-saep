@@ -1,17 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+
+  <style>
+    /* --- Estilo geral da página --- */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e7f0ff; /* azul claro de fundo */
+      color: #0d1b2a; /* azul escuro para textos */
+    }
+
+    /* --- Header / topo da página --- */
+    header {
+      background-color: #1e3a8a; /* azul escuro */
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    /* --- Navegação / Menu --- */
+    nav {
+      background-color: #3b5998; /* azul médio */
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #e7f0ff; /* branco/azulado */
+      color: #1e3a8a; /* azul escuro */
+    }
+
+    /* --- Conteúdo principal --- */
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #ffffff; /* branco */
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #1e3a8a;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #e7f0ff; /* azul claro nos cards */
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: #d0e0ff; /* azul ainda mais claro ao hover */
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #1e3a8a;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #0d1b2a;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      background-color: #1e3a8a; /* azul escuro */
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* --- Responsivo --- */
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <ul>
-        <li><a href="./cadastroUsuarios.html">Cadastro de Usuarios</a></li>
-        <li><a href="./cadastroTarefas.html">Cadastro de Tarefas</a></li>
-        <li><a href="./gerenciamentoTarefas.html">Gerenciamento de Tarefas</a></li>
 
+  <!-- Header -->
+  <header>
+    <h1>Bem-vindo ao Sistema de Tarefas</h1>
+  </header>
 
-    </ul>
+  <!-- Menu de navegação -->
+  <nav>
+    <a href="./cadastroUsuarios.html">Cadastro de Usuários</a>
+    <a href="./cadastroTarefas.html">Cadastro de Tarefas</a>
+    <a href="./gerenciamentoTarefas.html">Gerenciamento de Tarefas</a>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>Escolha uma ação</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Cadastro de Usuários</h3>
+        <p>Adicione novos usuários ao sistema.</p>
+      </div>
+      <div class="card">
+        <h3>Cadastro de Tarefas</h3>
+        <p>Crie novas tarefas e atribua aos usuários.</p>
+      </div>
+      <div class="card">
+        <h3>Gerenciamento de Tarefas</h3>
+        <p>Edite, atualize ou exclua tarefas existentes.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Sistema de Tarefas | Todos os direitos reservados
+  </footer>
+
 </body>
-</html> 
+</html>
